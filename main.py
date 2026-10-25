@@ -53,7 +53,7 @@ def main():
     credits = int(input("How many credits are you taking? "))
     while True:
         # Show your menu here.
-        print( "THE COST OF COLLEGE \n 1. Per semester \n 2. Per month \n Per class day \n Per credit \n Per CS 1430 class \n Cost of skipped classes")
+        print( "THE COST OF COLLEGE \n 1. Per semester \n 2. Per month \n 3. Per class day \n 4. Per credit \n 5. Per CS 1430 class \n 6. Cost of skipped classes")
         choice = input("Choose an option: ")
 
         if choice == "Q":
@@ -73,7 +73,7 @@ def main():
             print (f"One credit costs: ${credit:,.2f}")
         elif choice == "5":
             CS1430credit = cost_per_class (annual_cost, credits)
-            print (f"One CS1430 class costs: {CS1430credit:,.2f}")
+            print (f"One CS1430 class costs: ${CS1430credit:,.2f}")
         elif choice == "6":
             classes_skipped= int(input("How many CS1430 classes have you skipped? "))
             skipped_cost = cost_per_class(annual_cost, credits) * classes_skipped
